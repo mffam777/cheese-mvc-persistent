@@ -11,6 +11,8 @@
 
 </ul>
 
+<p th:unless="${cheeses.size()}"><i>No cheeses yet</i></p>
+
 <p><<a th:herf="'/menu/add-item/' + ${menuId}">Add Cheese</a></p>
 
 </body>
