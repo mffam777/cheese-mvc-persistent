@@ -30,7 +30,7 @@ public class CategoryController {
         /**
          * category/index
          * */
-        return "";
+        return "category/index";
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
