@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @Controller
 @RequestMapping(value = "menu")
@@ -76,9 +77,11 @@ public class MenuController {
         AddMenuItemForm form = new AddMenuItemForm(
                 cheeseDao.findAll(),
                 menu);
+        List<Cheese> cheeses = menu.getCheeses();
 
         model.addAttribute("title" , "Add item to menu: " + menu.getName());
         model.addAttribute("form" , form);
+        model.addAttribute("cheeses" , menu.getCheeses());
         return "menu/add-item";
     }
 
