@@ -71,7 +71,7 @@ public class MenuController {
 
     @RequestMapping(value = "add-item/{menuId}", method = RequestMethod.GET)
     public String addItem(Model model , @PathVariable int menuId) {
-
+        System.out.println("Add Item");
         Menu menu = menuDao.findOne(menuId);
 
         AddMenuItemForm form = new AddMenuItemForm(
@@ -94,6 +94,8 @@ public class MenuController {
             model.addAttribute("form" , form);
             return "menu/add-item";
         }
+
+        System.out.println("add-item - POST");
 
         Cheese theCheese = cheeseDao.findOne(form.getCheeseId());
         Menu theMenu = menuDao.findOne(form.getMenuId());

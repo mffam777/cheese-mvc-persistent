@@ -22,16 +22,20 @@ public class Menu {
     @ManyToMany
     private List<Cheese> cheeses;
 
+
+    // Menu
     public Menu() {}
 
     public void addItem(Cheese item) {
         cheeses.add(item);
     }
 
+    // ID
     public int getId() {
         return id;
     }
 
+    // Name
     public String getName() {
         return name;
     }
@@ -40,6 +44,7 @@ public class Menu {
         this.name = name;
     }
 
+    //List
     public List<Cheese> getCheeses() {
         return cheeses;
     }
