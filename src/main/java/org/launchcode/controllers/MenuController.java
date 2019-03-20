@@ -89,7 +89,7 @@ public class MenuController {
     }
 
     // NOt Working
-    @RequestMapping(value = "add-item", method = RequestMethod.POST)
+    @RequestMapping(value = "/add-item/{menuId}", method = RequestMethod.POST)
     public String addItem(@ModelAttribute @Valid AddMenuItemForm form, Errors errors, Model model) {
         System.out.println("Add-Item - MEnu Controller -POST");
         if (errors.hasErrors()) {

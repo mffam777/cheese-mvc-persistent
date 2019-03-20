@@ -45,26 +45,35 @@ public class Cheese {
     }
 
     public void setName(String name) {
+        System.out.println("set name - Cheese Model");
+
         this.name = name;
     }
 
     public String getDescription() {
+        System.out.println("get Description - Cheese Model");
+
         return description;
     }
 
     public void setDescription(String description) {
+        System.out.println("set Description - Cheese Model");
+
         this.description = description;
     }
 
     public void setId(int id) {
+        System.out.println("set ID - Cheese Model");
         this.id = id;
     }
 
     public Category getCategory() {
+        System.out.println("get Category - Cheese Model");
         return category;
     }
 
     public void setCategory(Category category) {
+        System.out.println("Set Category  - Cheese Model ");
         this.category = category;
     }
 }

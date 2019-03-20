@@ -70,18 +70,21 @@ public class CheeseController {
 
     @RequestMapping(value = "remove", method = RequestMethod.GET)
     public String displayRemoveCheeseForm(Model model) {
+        System.out.println("Remove Cheese");
         model.addAttribute("cheeses" , cheeseDao.findAll());
         model.addAttribute("title" , "Remove Cheese");
         return "cheese/remove";
+
     }
 
     @RequestMapping(value = "remove", method = RequestMethod.POST)
-    public String processRemoveCheeseForm(@RequestParam int[] ids) {
-
+    public String processRemoveCheeseForm(@RequestParam int[] cheeseIds) {
+        System.out.println(cheeseIds);
+        /*
         for (int id : ids) {
             cheeseDao.delete(id);
         }
-
+        */
         return "redirect:";
     }
 
